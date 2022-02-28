@@ -21,6 +21,8 @@ export default class Progressbar extends Component {
             progressLineWidth = '';
         }
 
+        const clazz = step === 'SHIPPING_STEP' ? 'not-active' : '';
+
         return (
             <div className='progressbar'>
                 <div className='line-static'>
@@ -39,7 +41,7 @@ export default class Progressbar extends Component {
                     <div>Shipping</div>
                 </div>
 
-                <div className='second-point'>
+                <div className={`second-point ${clazz}`}>
                     <div className='point'
                          data-point={
                              step === 'DETAILS_STEP'

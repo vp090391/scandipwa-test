@@ -38,6 +38,13 @@
   }
 }
 
+.not-active {
+  .point {
+    background-color: var(--imported_secondary_dark_color, #929292);
+  }
+  color: var(--imported_secondary_dark_color, #929292);;
+}
+
 .point {
   width: 20px;
   height: 20px;

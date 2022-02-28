@@ -1,0 +1,60 @@
+.progressbar {
+  height: 75px;
+  margin: 0 auto;
+  max-width: var(--checkout-max-width);
+  background: var(--breadcrumbs-background);
+  display: flex;
+  align-items: center;
+}
+
+.line-static, .line-progress {
+  position: absolute;
+  height: 3px;
+  top: 40%;
+}
+
+.line-static {
+  width: 100%;
+  background-color: var(--imported_secondary_dark_color, #929292);
+}
+
+.line-progress {
+  background-color: var(--primary-base-color);
+}
+
+.first-point {
+  position: absolute;
+  left: 35%;
+  .point:before {
+    content: attr(data-point);
+  }
+}
+
+.second-point {
+  position: absolute;
+  right: 35%;
+  .point:before {
+    content: attr(data-point);
+  }
+}
+
+.point {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--primary-divider-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--primary-base-color);
+  box-sizing: content-box;
+  border: 7px solid var(--secondary-base-color);
+}
+
+.point:before {
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-40%);
+}
